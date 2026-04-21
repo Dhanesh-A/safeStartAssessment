@@ -1,0 +1,7 @@
+{
+  "users": [],
+  "products": [
+    { "id": 1, "title": "iPhone" },
+    { "id": 2, "title": "Laptop" }
+  ]
+}
