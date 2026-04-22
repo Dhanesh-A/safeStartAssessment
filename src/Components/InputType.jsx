@@ -1,6 +1,6 @@
 import './../App.css';
 
-const InputType = ({label, className, type = "text", id, name,minLength, maxLength ,size}) => {
+const InputType = ({label, className,errors, type = "text", id, registration, name,minLength, maxLength ,size}) => {
   return (
     <>
     <div className="inputLabel">{label}</div>
@@ -9,12 +9,12 @@ const InputType = ({label, className, type = "text", id, name,minLength, maxLeng
       id={id}
       name={name}
       className={className}
-      required
       minLength={minLength}
       maxLength={maxLength}
       size={size}
+      {...registration} 
     />
-
+    {errors && <span className="error-msg">{errors.message}</span>}
     </>
   );
 };
