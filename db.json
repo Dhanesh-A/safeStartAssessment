@@ -1,7 +1,26 @@
 {
-  "users": [],
+  "users": [
+    {
+      "name": "Dhanesh A",
+      "email": "dev.dhanesh15@gmail.com",
+      "password": "Dhanesh@1504",
+      "id": 1
+    },
+    {
+      "name": "Dhanesh Arun",
+      "email": "dhaneshshaesh12410@gmail.com",
+      "password": "Dhanesh@1506",
+      "id": 2
+    }
+  ],
   "products": [
-    { "id": 1, "title": "iPhone" },
-    { "id": 2, "title": "Laptop" }
+    {
+      "id": 1,
+      "title": "iPhone"
+    },
+    {
+      "id": 2,
+      "title": "Laptop"
+    }
   ]
 }
