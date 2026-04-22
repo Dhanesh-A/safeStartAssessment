@@ -1,26 +1,132 @@
 {
   "users": [
     {
-      "name": "Dhanesh A",
-      "email": "dev.dhanesh15@gmail.com",
-      "password": "Dhanesh@1504",
+      "name": "User 1",
+      "email": "userOne2026@gmail.com",
+      "password": "Welcome@123",
       "id": 1
-    },
-    {
-      "name": "Dhanesh Arun",
-      "email": "dhaneshshaesh12410@gmail.com",
-      "password": "Dhanesh@1506",
-      "id": 2
     }
   ],
   "products": [
     {
       "id": 1,
-      "title": "iPhone"
+      "name": "iPhone 15 Pro",
+      "price": 999,
+      "category": "Electronics",
+      "description": "Latest Apple smartphone with titanium design and A17 Pro chip.",
+      "image": "https://images.unsplash.com/photo-1695048133142-1a20484d2569?w=300&h=200&fit=crop"
     },
     {
       "id": 2,
-      "title": "Laptop"
+      "name": "Samsung Galaxy S24",
+      "price": 899,
+      "category": "Electronics",
+      "description": "Flagship Android phone with AI-powered camera system.",
+      "image": "https://images.unsplash.com/photo-1610945415295-d9bbf067e59c?w=300&h=200&fit=crop"
+    },
+    {
+      "id": 3,
+      "name": "MacBook Pro 14",
+      "price": 1999,
+      "category": "Electronics",
+      "description": "Powerful laptop with M3 chip for professionals.",
+      "image": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=300&h=200&fit=crop"
+    },
+    {
+      "id": 4,
+      "name": "Sony WH-1000XM5",
+      "price": 350,
+      "category": "Electronics",
+      "description": "Industry-leading noise cancelling wireless headphones.",
+      "image": "https://images.unsplash.com/photo-1618366712010-f4ae9c647dcb?w=300&h=200&fit=crop"
+    },
+    {
+      "id": 5,
+      "name": "iPad Air",
+      "price": 599,
+      "category": "Electronics",
+      "description": "Versatile tablet with M1 chip and stunning Liquid Retina display.",
+      "image": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=300&h=200&fit=crop"
+    },
+    {
+      "id": 6,
+      "name": "Nike Air Max 270",
+      "price": 120,
+      "category": "Clothing",
+      "description": "Lightweight and comfortable running shoes with air cushioning.",
+      "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=300&h=200&fit=crop"
+    },
+    {
+      "id": 7,
+      "name": "Levi's 501 Jeans",
+      "price": 60,
+      "category": "Clothing",
+      "description": "Classic straight fit denim jeans for everyday wear.",
+      "image": "https://images.unsplash.com/photo-1542272604-787c3835535d?w=300&h=200&fit=crop"
+    },
+    {
+      "id": 8,
+      "name": "Adidas Hoodie",
+      "price": 75,
+      "category": "Clothing",
+      "description": "Cozy fleece hoodie perfect for casual and sporty looks.",
+      "image": "https://assets.adidas.com/images/w_1880,f_auto,q_auto/9feadfde842140539145afd000e1817f_9366/IM4489_01_laydown.jpg"
+    },
+    {
+      "id": 9,
+      "name": "Ray-Ban Sunglasses",
+      "price": 150,
+      "category": "Clothing",
+      "description": "Iconic aviator sunglasses with UV400 protection.",
+      "image": "https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=300&h=200&fit=crop"
+    },
+    {
+      "id": 10,
+      "name": "The Alchemist",
+      "price": 15,
+      "category": "Books",
+      "description": "Paulo Coelho's masterpiece about following your dreams.",
+      "image": "https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=300&h=200&fit=crop"
+    },
+    {
+      "id": 11,
+      "name": "Atomic Habits",
+      "price": 18,
+      "category": "Books",
+      "description": "James Clear's guide to building good habits and breaking bad ones.",
+      "image": "https://images.unsplash.com/photo-1512820790803-83ca734da794?w=300&h=200&fit=crop"
+    },
+    {
+      "id": 12,
+      "name": "React JS Handbook",
+      "price": 45,
+      "category": "Books",
+      "description": "Complete guide to mastering React JS from beginner to advanced.",
+      "image": "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=300&h=200&fit=crop"
+    },
+    {
+      "id": 13,
+      "name": "Coffee Maker",
+      "price": 89,
+      "category": "Home & Kitchen",
+      "description": "Programmable drip coffee maker with thermal carafe.",
+      "image": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=300&h=200&fit=crop"
+    },
+    {
+      "id": 14,
+      "name": "Yoga Mat",
+      "price": 35,
+      "category": "Sports",
+      "description": "Non-slip premium yoga mat with alignment lines.",
+      "image": "https://static.vecteezy.com/system/resources/previews/046/815/369/non_2x/a-yoga-mat-is-rolled-up-and-sits-on-a-purple-and-blue-background-photo.jpg"
+    },
+    {
+      "id": 15,
+      "name": "Protein Powder",
+      "price": 55,
+      "category": "Sports",
+      "description": "Whey protein isolate for muscle recovery and growth.",
+      "image": "https://images.unsplash.com/photo-1593095948071-474c5cc2989d?w=300&h=200&fit=crop"
     }
   ]
 }

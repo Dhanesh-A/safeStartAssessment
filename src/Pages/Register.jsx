@@ -15,19 +15,45 @@ const Register = () => {
   }
 
 
-  const { register, handleSubmit, formState: { errors }, watch } = useForm();
+  const { register, handleSubmit, formState: { errors }, watch ,setError} = useForm();
+
+  // ✅ Separate function to check duplicate email
+  const checkEmailExists = async (email) => {
+    const res = await fetch(`http://localhost:3001/users?email=${email}`);
+    const users = await res.json();
+    return users.length > 0;
+  };
+
+  // ✅ Separate function to check duplicate username
+  const checkUsernameExists = async (name) => {
+    const res = await fetch(`http://localhost:3001/users?name=${name}`);
+    const users = await res.json();
+    return users.length > 0;
+  };
+
   const onSubmit = async (data) => {
     try {
-      // Check if user already exists
-      const checkRes = await fetch(`http://localhost:3001/users?email=${data.email}`);
-      const existingUsers = await checkRes.json();
-
-      if (existingUsers.length > 0) {
-        alert('Email already registered! Please login.');
+      // Step 1 — Check duplicate email
+      const emailExists = await checkEmailExists(data.email);
+      if (emailExists) {
+        setError('email', {
+          type: 'manual',
+          message: 'Email already registered! Please login.'
+        });
         return;
       }
 
-      // Save new user to JSON server
+      // Step 2 — Check duplicate username
+      const usernameExists = await checkUsernameExists(data.name);
+      if (usernameExists) {
+        setError('name', {
+          type: 'manual',
+          message: 'Username already taken! Please try a different name.'
+        });
+        return;
+      }
+
+      // Step 3 — Save new user to JSON server
       const response = await fetch('http://localhost:3001/users', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -42,11 +68,13 @@ const Register = () => {
         alert('Registered Successfully!');
         navigate('/login');
       }
+
     } catch (error) {
-      alert('Server not running! Start JSON server first.');
+      console.error('Error:', error);
+      alert('Something went wrong. Is JSON server running on port 3001?');
     }
   };
-  
+
   return (
     <>
       <div className="container">

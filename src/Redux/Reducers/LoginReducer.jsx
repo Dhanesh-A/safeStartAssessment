@@ -5,6 +5,7 @@ const LoginReducer = (state = initialState, action) => {
     case 'LOGIN':
       return { ...state, user: action.payload };
     case 'LOGOUT':
+      localStorage.removeItem('user');  // ✅ clear localStorage on logout
       return { ...state, user: null };
     default:
       return state;

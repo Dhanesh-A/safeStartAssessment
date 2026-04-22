@@ -1,14 +1,16 @@
 import '../App.css';
 import InputType from './../Components/InputType';
 import ButtonComp from './../Components/ButtonComp';
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Navigate } from "react-router-dom";
 import { useForm } from 'react-hook-form';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { loginAction } from './../Redux/Actions/LoginAction';
 
 const LoginPage = () => {
     const navigate = useNavigate();
     const dispatch = useDispatch();
+    const user = useSelector((state) => state.user);
+
 
     const {
         register,
@@ -16,6 +18,10 @@ const LoginPage = () => {
         formState: { errors },
         setError
     } = useForm();
+
+    if (user) {
+        return <Navigate to="/products" />;
+    }
 
     const onSubmit = async (data) => {
         try {
@@ -102,7 +108,7 @@ const LoginPage = () => {
                             </div>
                         </form>
 
-                        <div style={{ display: 'flex', justifyContent: 'space-between', margin: '5px 0' }}>
+                        <div style={{ display: 'flex', justifyContent: 'space-between', margin: '10px 0' }}>
                             <a href="/forgot-password" style={{ textDecoration: 'none', color: '#2b77f4' }}>Forgot Password?</a>
                             <a href="/register" style={{ textDecoration: 'none', color: '#2b77f4' }}>Create new account</a>
                         </div>

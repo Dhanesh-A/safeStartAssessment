@@ -49,7 +49,6 @@ const ForgotPassword = () => {
   };
 
   const onSubmit = async (data) => {
-    console.log('Form Data:', data);
     try {
       const resByEmail = await fetch(`http://localhost:3001/users?email=${data.emailOrUsername}`);
       const usersByEmail = await resByEmail.json();

@@ -14,7 +14,7 @@ const InputType = ({label, className,errors, type = "text", id, registration, na
       size={size}
       {...registration} 
     />
-    {errors && <div className="error-msg">{errors.message}</div>}
+    {errors && <span className="error-msg">{errors.message}</span>}
     </>
   );
 };
